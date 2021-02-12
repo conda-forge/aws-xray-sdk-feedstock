@@ -1,48 +1,49 @@
 {% set name = "aws-xray-sdk" %}
-{% set version = "0.95" %}
+{% set version = "2.6.0" %}
+
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9e7ba8dd08fd2939376c21423376206bff01d0deaea7d7721c6b35921fed1943
+  sha256: abf5b90f740e1f402e23414c9670e59cb9772e235e271fef2bce62b9100cbc77
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv "
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.4,<3.9
   run:
+    - botocore >=1.11.3
+    - future
     - jsonpickle
-    - python
-    # uses pkg_resources
-    - setuptools
-    - requests
+    - python >=3.4,<3.9
     - wrapt
+    # Requires enum34 for python <3.4 which is not supported by conda-forge anymore and therefore skipped.
 
 test:
   imports:
     - aws_xray_sdk
     - aws_xray_sdk.core
-    - aws_xray_sdk.core.emitters
-    - aws_xray_sdk.core.exceptions
-    - aws_xray_sdk.core.models
-    - aws_xray_sdk.core.plugins
-    - aws_xray_sdk.core.sampling
-    - aws_xray_sdk.core.utils
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
-  home: https://github.com/aws/aws-xray-sdk-python
-  license: Apache Software
+  home: https://docs.aws.amazon.com/xray-sdk-for-python/latest/reference/
+  summary: The AWS X-Ray SDK for Python (the SDK) enables Python developers to record and emit information from within their applications to the AWS X-Ray service.
+  license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
-  summary: The AWS X-Ray SDK for Python (the SDK) enables Python developers to record and emit information from within their applications to the AWS X-Ray service.
+  dev_url: https://github.com/aws/aws-xray-sdk-python
+  doc_url: https://docs.aws.amazon.com/xray/latest/devguide/aws-xray.html
 
 extra:
   recipe-maintainers:
