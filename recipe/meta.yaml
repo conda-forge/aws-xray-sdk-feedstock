@@ -41,7 +41,9 @@ about:
   summary: The AWS X-Ray SDK for Python (the SDK) enables Python developers to record and emit information from within their applications to the AWS X-Ray service.
   license: Apache-2.0
   license_family: APACHE
-  license_file: LICENSE
+  license_file:
+    - LICENSE
+    - NOTICE
   dev_url: https://github.com/aws/aws-xray-sdk-python
   doc_url: https://docs.aws.amazon.com/xray/latest/devguide/aws-xray.html
 
