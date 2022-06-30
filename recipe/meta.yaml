@@ -1,5 +1,5 @@
 {% set name = "aws-xray-sdk" %}
-{% set version = "2.9.0" %}
+{% set version = "2.10.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b0cd972db218d4d8f7b53ad806fc6184626b924c4997ae58fc9f2a8cd1281568
+  sha256: 9b14924fd0628cf92936055864655354003f0b1acc3e1c3ffde6403d0799dd7a
 
 build:
   number: 0
