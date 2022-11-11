@@ -1,5 +1,5 @@
 {% set name = "aws-xray-sdk" %}
-{% set version = "2.10.0" %}
+{% set version = "2.11.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9b14924fd0628cf92936055864655354003f0b1acc3e1c3ffde6403d0799dd7a
+  sha256: 78835fc841f03e550858f18a9973eab8618f47f22d2f59edf130578fa545a867
 
 build:
   number: 0
@@ -20,6 +20,7 @@ requirements:
     - pip
     - python >=3.4
   run:
+    - enum34
     - botocore >=1.11.3
     - python >=3.4
     - wrapt
