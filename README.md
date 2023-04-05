@@ -1,11 +1,11 @@
-About aws-xray-sdk
-==================
+About aws-xray-sdk-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/aws-xray-sdk-feedstock/blob/main/LICENSE.txt)
 
 Home: https://docs.aws.amazon.com/xray-sdk-for-python/latest/reference/
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/aws-xray-sdk-feedstock/blob/main/LICENSE.txt)
 
 Summary: The AWS X-Ray SDK for Python (the SDK) enables Python developers to record and emit information from within their applications to the AWS X-Ray service.
 
