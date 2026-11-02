@@ -1,5 +1,5 @@
 {% set name = "aws-xray-sdk" %}
-{% set version = "2.15.0" %}
+{% set version = "2.16.0" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 794381b96e835314345068ae1dd3b9120bd8b4e21295066c37e8814dbb341365
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 4eb02acb861b83edd8b83603194ed549aaa929106be3f1d57d459983f5107d79
 
 build:
   number: 0
